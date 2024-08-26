@@ -23,6 +23,17 @@ service LeaveManagementService  {
     }
   ])as projection on Leave.LeaveRequest;
 
+  // @onboarded
+  // action submitLeaveRequest(
+  // EmpId:UUID,
+  // StartDate        : DateTime,
+  // EndDate          : DateTime,
+  // Reason           : String,
+  // SubmissionDate   : DateTime,
+  // );
+
+
+
   @readonly
   entity Manager as projection on Leave.Manager;
 
@@ -31,13 +42,6 @@ service LeaveManagementService  {
 
   @readonly
   entity Employees as projection on Leave.Employee;
-
-  // @cds.persistence.exists
- @cds.persistence.exists
-entity LoggedInUser {
-    id : String;
-    userRole : String;
-}
   
 
 

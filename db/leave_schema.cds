@@ -2,7 +2,7 @@ namespace app.Leave;
 
 using { cuid, managed ,sap.common.CodeList } from '@sap/cds/common';
 
-entity Employee :cuid, managed { 
+entity Employee :cuid, managed {    
 firstName     : String;
 lastName      : String;
 Emp_Name          : String = firstName || ' ' || lastName;

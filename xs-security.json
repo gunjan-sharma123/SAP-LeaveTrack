@@ -17,7 +17,7 @@
   "role-templates": [
     {
       "name": "Employee",
-      "description": "generated",
+      "description": "Employee roles",
       "scope-references": [
         "$XSAPPNAME.Employee"
       ],
@@ -25,7 +25,7 @@
     },
     {
       "name": "Manager",
-      "description": "generated",
+      "description": "Manager roles" ,
       "scope-references": [
         "$XSAPPNAME.Manager"
       ],
@@ -33,7 +33,7 @@
     },
     {
       "name": "HR",
-      "description": "generated",
+      "description": "HR roles",
       "scope-references": [
         "$XSAPPNAME.HR"
       ],
