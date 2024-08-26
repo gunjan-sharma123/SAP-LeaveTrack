@@ -26,6 +26,7 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: LeaveTrackManagement-db
+      - name: LeaveTrackManagement-auth
 
   - name: LeaveTrackManagement-db-deployer
     type: hdb
@@ -41,3 +42,12 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: LeaveTrackManagement-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: LeaveTrackManagement-${org}-${space}
+        tenant-mode: dedicated
