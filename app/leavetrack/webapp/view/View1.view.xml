@@ -1,0 +1,35 @@
+<mvc:View controllerName="com.leavetrack.leavetrack.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+     xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+         <content>
+            <Panel
+                width="auto"
+                class="sapUiResponsiveMargin"
+                visible="true"
+                accessibleRole="Region"
+            >
+                <Title text="Employee" />
+                <core:Fragment
+                    fragmentName="com.leavetrack.leavetrack.view.fragment.Employee"
+                />
+            </Panel>
+            <Panel
+                width="auto"
+                class="sapUiResponsiveMargin"
+                 visible="false"
+            >
+                <core:Fragment fragmentName="com.leavetrack.leavetrack.view.fragment.ApplyLeave" />
+            </Panel>
+            <Panel
+                width="auto"
+                class="sapUiResponsiveMargin"
+                visible="false"
+            >
+                <core:Fragment fragmentName="com.leavetrack.leavetrack.view.fragment.HR" />
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

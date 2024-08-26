@@ -1,0 +1,239 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true"
+  
+>
+ <HBox class="leaveCountsBox">
+ <FlexBox alignItems="Center" justifyContent="Center" class="panelContainer">
+<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Casual Leave" >
+    <TileContent>
+        <ImageContent src="images/Woman_avatar_01.png" />
+        <l:HorizontalLayout>
+		 <VBox>
+				<Text text="Total Leaves: 10" />
+                <Text text="Available Leaves: 7" />
+                <Text text="Consume Leaves: 3" />
+            </VBox>
+        </l:HorizontalLayout>
+    </TileContent>
+</GenericTile>
+ 	<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sick Leave">
+		<TileContent>
+			<ImageContent src="sap-icon://line-charts" />
+			 <l:HorizontalLayout>
+		 <VBox>
+				<Text text="Total Leaves: 10" />
+                <Text text="Available Leaves: 5" />
+                <Text text="Consume Leaves: 5" />
+            </VBox>
+        </l:HorizontalLayout>
+		</TileContent>
+	</GenericTile>
+    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Earned Leave">
+		<TileContent>
+			<ImageContent src="sap-icon://line-charts" />
+			 <l:HorizontalLayout>
+		 <VBox>
+				<Text text="Total Leaves: 10" />
+                <Text text="Available Leaves: 3" />
+                <Text text="Consume Leaves: 7" />
+            </VBox>
+        </l:HorizontalLayout>
+		</TileContent>
+	</GenericTile>
+    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Unpaid Leave">
+		<TileContent>
+			<ImageContent src="sap-icon://line-charts" />
+			 <l:HorizontalLayout>
+		 <VBox>
+				<Text text="Total Leaves: 10" />
+                <Text text="Available Leaves: 4" />
+                <Text text="Consume Leaves: 6" />
+            </VBox>
+        </l:HorizontalLayout>
+		</TileContent>
+	</GenericTile>
+     <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Half Leave">
+		<TileContent>
+			<ImageContent src="sap-icon://line-charts" />
+			 <l:HorizontalLayout>
+		 <VBox>
+				<Text text="Total Leaves: 10" />
+                <Text text="Available Leaves: 8" />
+                <Text text="Consume Leaves: 2" />
+            </VBox>
+        </l:HorizontalLayout>
+		</TileContent>
+	</GenericTile>
+     <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Adjustment Leave">
+		<TileContent>
+			<ImageContent src="sap-icon://line-charts" />
+			 <l:HorizontalLayout>
+		 <VBox>
+				<Text text="Total Leaves: 10" />
+                <Text text="Available Leaves: 7" />
+                <Text text="Consume Leaves: 3" />
+            </VBox>
+        </l:HorizontalLayout>
+		</TileContent>
+	</GenericTile>
+    </FlexBox>
+    </HBox>
+
+            <!-- <Button text="Apply Leave" press="onApplyLeavePress" class="sapUiSmallMarginBottom btn-one"
+			ariaHasPopup="Dialog" /> -->
+
+<VBox xmlns:l="sap.ui.layout">
+    
+	<Panel
+		id="containerLayout"
+		headerText="Leave Application Form"
+		width="100%"
+		class="sapUiLargeMarginTop sapUiLargeMarginBottom"
+		>
+		<content>
+        <l:HorizontalLayout xmlns:l="sap.ui.layout">
+            <Image src="{img>/products/pic1}" width="10em" />
+            	<VBox class="sapUiSmallMargin">
+		<f:Form id="FormToolbar"
+    editable="true"
+    ariaLabelledBy="Title1">
+    <f:toolbar>
+        <Toolbar id="TB1">
+            <Title id="Title1" text="Apply For Leave"/>
+            <ToolbarSpacer />
+        </Toolbar>
+    </f:toolbar>
+    <f:layout>
+        <f:ResponsiveGridLayout
+            labelSpanXL="4"
+            labelSpanL="3"
+            labelSpanM="4"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="0"
+            emptySpanL="4"
+            emptySpanM="0"
+            emptySpanS="0"
+            columnsXL="2"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="false" />
+    </f:layout>
+    <f:formContainers>
+        <f:FormContainer ariaLabelledBy="Title2">
+            <f:formElements>
+                <f:FormElement label="Select Leave Type">
+                    <f:fields>
+                        <Select width="100%" id="country" selectedKey="{Country}">
+                            <items>
+                                <core:Item text="Select Leave Type" key=""/>
+                                <core:Item text="Casual Leave" key="CL"/>
+                                <core:Item text="Sick Leave" key="SL"/>    
+                                <core:Item text="Earned Leave" key="EL"/>
+                                <core:Item text="Unpaid Leave" key="UPL"/>    
+                                <core:Item text="Half Leave" key="HL"/>
+                                <core:Item text="Adjustment Leave" key="AL"/>    
+                            </items>
+                        </Select>
+                    </f:fields>
+                </f:FormElement>
+                <f:FormElement label="From Date">
+                    <f:fields>
+                        <DatePicker
+                            id="DP1"
+                            placeholder="Enter Date"
+                            change="handleChange"
+                            class="sapUiSmallMarginBottom"/>
+                    </f:fields>
+                </f:FormElement>
+                <f:FormElement label="To Date">
+                    <f:fields>
+                        <DatePicker
+                            id="DP2"
+                            placeholder="Enter Date"
+                            change="handleChange"
+                            class="sapUiSmallMarginBottom"/>
+                    </f:fields>
+                </f:FormElement>
+                <!-- Add Input Element here -->
+                <f:FormElement label="Description:-">
+                    <f:fields>
+                        <Input
+                            value=""
+                            ariaDescribedBy="descriptionNodeId"
+                            width="400px"
+                            fieldWidth="75%"
+                            class="sapUiSmallMarginBottom" />
+                    </f:fields>
+                </f:FormElement>
+				 <f:FormElement>
+                    <f:fields>
+                        <Button text="Apply" press="onPress"  />
+                    </f:fields>
+                </f:FormElement>
+            </f:formElements>
+        </f:FormContainer>
+    </f:formContainers>
+</f:Form>
+	</VBox>
+        </l:HorizontalLayout>
+    </content>
+	</Panel>
+	</VBox>
+
+					
+<Table
+ headerText="List of Employee's" id="idProductsTable"
+        inset="false"
+        items="{
+            path: '/LeaveRequest'
+        }"
+>
+    <columns>
+        <Column width="12em">
+            <Text text="Date" />
+        </Column>
+        <Column minScreenWidth="Tablet" demandPopin="true">
+            <Text text="Leave Type" />
+        </Column>
+        <Column width="12em">
+            <Text text="Count" />
+        </Column>
+        <Column width="12em">
+            <Text text="Reason" />
+        </Column>
+        <Column width="12em">
+            <Text text="Approval Status" />
+        </Column>
+    </columns>
+
+    <items>
+        <ColumnListItem>
+            <cells>
+                <ObjectIdentifier text="{StartDate}" class="sapUiTinyMarginTopBottom" />
+            </cells>
+            <cells>
+                <Text text="{LeaveType}" />
+            </cells>
+            <cells>
+                <Text text="1 Days" />
+            </cells>
+            <cells>
+                <Text text="{Reason}" />
+            </cells>
+            <cells>
+                <Text text="{Status}" />
+                <!-- <core:Icon src="{sap-icon://SAP-icons-TNT/technicalinstance}" /> -->
+            </cells>
+        </ColumnListItem>
+        
+        
+    </items>
+</Table>		
+	
+</core:FragmentDefinition>

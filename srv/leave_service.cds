@@ -31,13 +31,6 @@ service LeaveManagementService  {
 
   @readonly
   entity Employees as projection on Leave.Employee;
-
-  // @cds.persistence.exists
- @cds.persistence.exists
-entity LoggedInUser {
-    id : String;
-    userRole : String;
-}
   
 
 
